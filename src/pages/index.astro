@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '@/styles/globals.css';
+---
+
+<Layout title='Product preview card component.'>
+  <main
+    class='mx-4 my-7 flex items-center justify-center lg:mx-auto lg:my-[10.94rem]'
+  >
+    <section class='flex flex-col lg:flex-row'>
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/image-product-desktop.jpg'
+        />
+        <img
+          src='/images/image-product-mobile.jpg'
+          alt=''
+          class='rounded-t-[0.625rem] lg:w-[19rem] lg:rounded-l-[0.625rem] lg:rounded-tr-none'
+        />
+      </picture>
+      <div
+        class='rounded-b-[0.625rem] bg-white py-6 pl-[1.56rem] pr-[1.44rem] lg:rounded-r-[0.625rem] lg:rounded-bl-none lg:p-8'
+      >
+        <h1
+          class='mb-3 font-Montserrat text-xs font-medium uppercase leading-normal tracking-[0.3125rem] text-[#6C7289] lg:mb-5'
+        >
+          Perfume
+        </h1>
+
+        <h2
+          class='mb-4 w-[18.4375rem] font-Fraunces text-[2rem] font-bold leading-8 text-[#1C232B] lg:mb-6 lg:w-[14.75rem]'
+        >
+          Gabrielle Essence Eau De Parfum
+        </h2>
+
+        <p
+          class='mb-6 w-[18.4375rem] font-Montserrat text-sm font-medium leading-[1.4375rem] text-[#6C7289] lg:mb-[1.81rem] lg:w-[14.8125rem]'
+        >
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+
+        <div class='mb-5 flex items-center gap-[1.19rem] lg:mb-[1.88rem]'>
+          <h3
+            class='font-Fraunces text-[2rem] font-bold leading-8 text-[#3D8168]'
+          >
+            $149.99
+          </h3>
+          <h4
+            class='font-Montserrat text-sm leading-[1.4375rem] text-[#6C7289] line-through'
+          >
+            $169.99
+          </h4>
+        </div>
+
+        <button
+          type='button'
+          class='flex h-12 w-[18.4375rem] cursor-pointer items-center justify-center gap-[0.73rem] rounded-lg bg-[#3D8168] text-center font-Montserrat text-sm font-bold leading-normal text-white transition-colors duration-300 ease-in-out hover:bg-[#1A4032] lg:w-[14.75rem]'
+        >
+          <img src='/images/icon-cart.svg' alt='cart icon' />
+          Add to Cart</button
+        >
+      </div>
+    </section>
+  </main>
+</Layout>
